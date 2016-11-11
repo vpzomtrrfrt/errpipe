@@ -17,7 +17,6 @@ while(true) {
 }
 var cmd2 = process.argv[i+1];
 var args2 = process.argv.slice(i+2);
-console.log(cmd1, args1.join(","), cmd2, args2.join(","))
 
 var spawn = require('child_process').spawn;
 var proc1 = spawn(cmd1, args1);
