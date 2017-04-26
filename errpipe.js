@@ -29,3 +29,7 @@ proc1.stderr.on('data', function(data) {
 proc2.stdout.pipe(process.stdout);
 proc2.stderr.pipe(process.stderr);
 process.stdin.pipe(proc1.stdin);
+
+proc1.on('close', function(code) {
+	process.exit(code);
+});
